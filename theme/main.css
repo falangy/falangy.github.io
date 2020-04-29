@@ -11,7 +11,7 @@ body {
   background-color: var(--white);
   color: #111;
   width: 80%;
-  min-width: 400px;
+  min-width: 650px;
   min-height: 200px;
   padding: 1em;
   margin: 5% 10%;
@@ -55,12 +55,13 @@ pre {
 }
 
 /*Navigation*/
-.navigation a   { color: var(--black)text-decoration: none;  font-size: 13px; padding: 10px;}
-.navigation ol  { margin: 0; padding: 0;}
+.navigation a   { color: var(--black)text-decoration: none;  font-size: 13px; padding: 15px;}
+.navigation ol  { margin: auto; padding: 0;}
 .navigation li  { display: inline; padding: 0; content:none;}
 .navigation {
-                float: left; background-color: var(--pink); 
+                /*float: left;*/ background-color: var(--pink); 
                 padding-top:0;
+                padding-left:20px;
                 text-align: center;
                 position: fixed;
                 top: 0;
@@ -74,8 +75,10 @@ pre {
 div.grid {
   display: flex;
   flex-wrap: wrap;
-  --height: 450; /* Minimal row height */
+  --height: 400; /* Minimal row height */
   --ratio: 1; /* Default aspect ratio for photos that are not loaded yet */
+  max-width: 100%;
+  max-height: 100%;
 }
 /*Each photo in photo grid*/
 div.item {
@@ -90,11 +93,15 @@ div.item {
   background-position: top center;
   background-repeat: no-repeat;
   overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 div.item img {
   width: 99%;
   border-radius: 2px;
+/*  max-width: 100%;
+  max-height: 100%;*/
 }
 
 div.item img:hover {
@@ -130,6 +137,8 @@ div.entry-content {
 div.entry-content img {
    width: 1000px;
    margin: auto;
+   max-width: 100%;
+   max-height: 100%;
 
 }
 
